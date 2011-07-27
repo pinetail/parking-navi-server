@@ -32,8 +32,8 @@ production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: parking-navi-server_production
+  database: parking-navi
   pool: 5
   username: root
   password:
-  socket: /opt/local/var/run/mysql5/mysqld.sock
+  socket: /var/lib/mysql/mysql.sock

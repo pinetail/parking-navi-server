@@ -1,0 +1,53 @@
+<h1>Listing shops</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Tel</th>
+    <th>Category</th>
+    <th>Uid</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+    <th>Parking url</th>
+    <th>Road</th>
+    <th>Information</th>
+    <th>Shop</th>
+    <th>Restaurant</th>
+    <th>Park</th>
+    <th>Rest room</th>
+    <th>Memo</th>
+    <th>Use flg</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @shops.each do |shop| %>
+  <tr>
+    <td><%= shop.name %></td>
+    <td><%= shop.address %></td>
+    <td><%= shop.tel %></td>
+    <td><%= shop.category %></td>
+    <td><%= shop.uid %></td>
+    <td><%= shop.latitude %></td>
+    <td><%= shop.longitude %></td>
+    <td><%= shop.parking_url %></td>
+    <td><%= shop.road %></td>
+    <td><%= shop.information %></td>
+    <td><%= shop.shop %></td>
+    <td><%= shop.restaurant %></td>
+    <td><%= shop.park %></td>
+    <td><%= shop.rest_room %></td>
+    <td><%= shop.memo %></td>
+    <td><%= shop.use_flg %></td>
+    <td><%= link_to 'Show', shop %></td>
+    <td><%= link_to 'Edit', edit_shop_path(shop) %></td>
+    <td><%= link_to 'Destroy', shop, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Shop', new_shop_path %>

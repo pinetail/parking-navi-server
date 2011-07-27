@@ -1,0 +1,81 @@
+<%= form_for(@shop) do |f| %>
+  <% if @shop.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@shop.errors.count, "error") %> prohibited this shop from being saved:</h2>
+
+      <ul>
+      <% @shop.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :tel %><br />
+    <%= f.text_field :tel %>
+  </div>
+  <div class="field">
+    <%= f.label :category %><br />
+    <%= f.text_field :category %>
+  </div>
+  <div class="field">
+    <%= f.label :uid %><br />
+    <%= f.text_field :uid %>
+  </div>
+  <div class="field">
+    <%= f.label :latitude %><br />
+    <%= f.text_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br />
+    <%= f.text_field :longitude %>
+  </div>
+  <div class="field">
+    <%= f.label :parking_url %><br />
+    <%= f.text_field :parking_url %>
+  </div>
+  <div class="field">
+    <%= f.label :road %><br />
+    <%= f.text_field :road %>
+  </div>
+  <div class="field">
+    <%= f.label :information %><br />
+    <%= f.text_field :information %>
+  </div>
+  <div class="field">
+    <%= f.label :shop %><br />
+    <%= f.text_field :shop %>
+  </div>
+  <div class="field">
+    <%= f.label :restaurant %><br />
+    <%= f.text_field :restaurant %>
+  </div>
+  <div class="field">
+    <%= f.label :park %><br />
+    <%= f.text_field :park %>
+  </div>
+  <div class="field">
+    <%= f.label :rest_room %><br />
+    <%= f.text_field :rest_room %>
+  </div>
+  <div class="field">
+    <%= f.label :memo %><br />
+    <%= f.text_area :memo %>
+  </div>
+  <div class="field">
+    <%= f.label :use_flg %><br />
+    <%= f.text_field :use_flg %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
