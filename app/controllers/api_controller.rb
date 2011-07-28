@@ -23,9 +23,9 @@ class ApiController < ApplicationController
     csv_text = FasterCSV.generate(:force_quotes => true) do |csv|
 #    CSV::Writer.generate(output = "") do |csv|
       for shop in @shops
-        csv << [shop.name, shop.address, shop.tel, shop.gotochi_category, shop.tabelog_id, shop.business_hours, 
-        shop.holiday, shop.latitude, shop.longitude, shop.score, shop.tabelog_url, shop.tabelog_mobile_url, 
-        shop.station, shop.memo]
+        csv << [shop.name, shop.address, shop.tel, shop.category, shop.latitude, shop.longitude, 
+        shop.parking_url, shop.road, shop.information, shop.shop, shop.restaurant, shop.park, 
+        shop.rest_room, shop.bath_room, shop.memo]
       end
     end
     
