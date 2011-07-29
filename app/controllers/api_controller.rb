@@ -25,7 +25,7 @@ class ApiController < ApplicationController
       for shop in @shops
         csv << [shop.name, shop.address, shop.tel, shop.category, shop.latitude, shop.longitude, 
         shop.parking_url, shop.road, shop.information, shop.shop, shop.restaurant, shop.park, 
-        shop.rest_room, shop.bath_room, shop.memo]
+        shop.rest_room, shop.bath_room, shop.memo, shop.parking, shop.car]
       end
     end
     
