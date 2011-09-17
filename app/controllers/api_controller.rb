@@ -26,7 +26,8 @@ class ApiController < ApplicationController
         csv << [shop.name, shop.address, shop.tel, shop.category, shop.latitude, shop.longitude, 
         shop.parking_url, shop.road, shop.information, shop.shop, shop.restaurant, shop.park, 
         shop.rest_room, shop.bath_room, shop.memo, shop.parking, shop.car, shop.baby_bed, shop.shower,
-        shop.gas, shop.food_court, shop.food_court_business_hours, shop.restaurant_business_hours, shop.ss_id]
+        shop.gas, shop.food_court, shop.food_court_business_hours, shop.restaurant_business_hours, shop.ss_id,
+        shop.id]
       end
     end
     
