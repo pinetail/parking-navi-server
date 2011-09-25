@@ -1,0 +1,31 @@
+<h1>Listing shops_visits</h1>
+
+<table>
+  <tr>
+    <th>Uuid</th>
+    <th>Twitter</th>
+    <th>Shops uid</th>
+    <th>Memo</th>
+    <th>Visited at</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @shops_visits.each do |shops_visit| %>
+  <tr>
+    <td><%= shops_visit.uuid %></td>
+    <td><%= shops_visit.twitter_id %></td>
+    <td><%= shops_visit.shops_uid %></td>
+    <td><%= shops_visit.memo %></td>
+    <td><%= shops_visit.visited_at %></td>
+    <td><%= link_to 'Show', shops_visit %></td>
+    <td><%= link_to 'Edit', edit_shops_visit_path(shops_visit) %></td>
+    <td><%= link_to 'Destroy', shops_visit, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Shops visit', new_shops_visit_path %>

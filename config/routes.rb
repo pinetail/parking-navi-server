@@ -1,4 +1,6 @@
 ParkingNaviServer::Application.routes.draw do
+  resources :shops_visits
+
   get "api/export"
   post "api/create"
 

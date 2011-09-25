@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Uuid:</b>
+  <%= @shops_visit.uuid %>
+</p>
+
+<p>
+  <b>Twitter:</b>
+  <%= @shops_visit.twitter_id %>
+</p>
+
+<p>
+  <b>Shops uid:</b>
+  <%= @shops_visit.shops_uid %>
+</p>
+
+<p>
+  <b>Memo:</b>
+  <%= @shops_visit.memo %>
+</p>
+
+<p>
+  <b>Visited at:</b>
+  <%= @shops_visit.visited_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_shops_visit_path(@shops_visit) %> |
+<%= link_to 'Back', shops_visits_path %>
